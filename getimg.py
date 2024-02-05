@@ -1,6 +1,6 @@
 # getimg - creates the npy files for examination by bigeye.py
 # Usage: edit the routine euclid_get_fl at the bottom and run
-import os,sys,glob,numpy as np,img_scale,scipy
+import os,sys,glob,numpy as np,scipy
 import matplotlib; from matplotlib import pyplot as plt
 import astropy; from astropy.io import fits
 from astropy.io.fits import getdata, getheader

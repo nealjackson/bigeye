@@ -4,7 +4,7 @@
 #  for each picture you think is a lens, hit 1,2,3 or 4 depending on confidence
 #  hit 5 to go to the next screen.
 #
-import numpy as np,scipy as sp, matplotlib,glob,os,sys,img_scale,time
+import numpy as np,scipy as sp, matplotlib,glob,os,sys,time
 from scipy import ndimage
 import astropy; from astropy.io.fits import getdata
 from matplotlib import pyplot as plt
