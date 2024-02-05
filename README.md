@@ -12,4 +12,6 @@ bigeye.py - allows you to inspect the mosaic stamps. Hit 1, 2, 3 or 4 in each ob
             judgement is overridden. Writes out a file called bigeye_events with the VIS fits file and the key-click (nb this is always
             open for append, so you need to manually delete it if starting again).
 
+bigeye_v2.py and getimg_v2.py are test versions which allow toggling between colour and VIS-only image panels (use the ; and # keys for this).
+
 Reference: see the accompanying pdf file.
