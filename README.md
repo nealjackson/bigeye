@@ -1,5 +1,5 @@
 # bigeye
-Software for automatic examination of many images
+Software for manual examination of many images
 
 Two Python scripts:
 
