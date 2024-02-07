@@ -145,14 +145,17 @@ def proc_bigeye_events():
     f.close()
     os.system('mv bigeye_events_new bigeye_events')
 
-def bigeye_examine(npystart=0,npyend=3,prefix='./'):
+def bigeye_examine(npystart=0,npyend=1000000,prefix='./'):
     time1=time.time()
     for i in range(npystart,npyend):
-        enew = np.ravel(np.load(prefix+'F%04d.npy'%i))
         try:
-            elist = np.append(elist,enew)
-        except:
-            elist = np.copy(enew)
+            enew = np.ravel(np.load(prefix+'F%04d.npy'%i))
+        except:    # leave if no file present
+            break
+#        try:
+#            elist = np.append(elist,enew)
+#        except:
+#            elist = np.copy(enew)
         npy_examine(prefix+'%04d.npy'%i,prefix+'G%04d.npy'%i,prefix+'F%04d.npy'%i)
         print('Elapsed time %d sec'%(int(time.time()-time1)))
         proc_bigeye_events()
