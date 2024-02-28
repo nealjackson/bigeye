@@ -137,7 +137,10 @@ def npy_examine(imgfile,img_bwfile,listfile,slide_init=0.94,\
 # Process the events file to take the LAST evaluation for each object (so that
 # if a mistake has been made, the second click counts)
 def proc_bigeye_events():
-    a = np.loadtxt('bigeye_events',dtype='str')
+    try:
+        a = np.loadtxt('bigeye_events',dtype='str')
+    except:
+        return
     f = open('bigeye_events_new','w')
     for i in np.unique(a[:,0]):
         iwhere = (np.ravel(np.argwhere(a[:,0]==i)))[-1]
